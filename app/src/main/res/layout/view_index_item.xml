@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_toLeftOf="@+id/divide">
+
+        <TextView
+            android:id="@+id/index_tipt"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:text="11111"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/index_zs"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:text="22222"
+            android:textSize="18sp"
+            android:layout_below="@id/index_tipt"
+            android:layout_marginBottom="10dp"/>
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/divide"
+        android:background="@android:color/darker_gray"
+        android:layout_centerHorizontal="true"
+        android:layout_width="1dp"
+        android:layout_height="100dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_toRightOf="@+id/divide">
+
+        <TextView
+            android:id="@+id/index_tipt2"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:text="11111"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/index_zs2"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:text="22222"
+            android:textSize="18sp"
+            android:layout_below="@id/index_tipt2"
+            android:layout_marginBottom="10dp"/>
+
+    </RelativeLayout>
+
+    <View
+        android:background="@android:color/darker_gray"
+        android:layout_below="@id/divide"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+</RelativeLayout>
