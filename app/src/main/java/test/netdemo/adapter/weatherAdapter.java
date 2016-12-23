@@ -27,7 +27,7 @@ public class WeatherAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     private final int INDEX = 1;
     private final int WEATHER_DATA = 2;
 
-    private String pm;
+    private List<ResultBean> resultList;
     private List<ResultBean.WeatherBean> weatherList;
     private List<ResultBean.IndexBean> indexList;
 
@@ -73,8 +73,8 @@ public class WeatherAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
         }
     }
 
-    public void setPM(String pm) {
-        this.pm = pm;
+    public void setResultList(List<ResultBean> resultList) {
+        this.resultList = resultList;
     }
 
     public void setWeatherData(List<ResultBean.WeatherBean> weatherList) {
@@ -86,7 +86,7 @@ public class WeatherAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     }
 
     private void initTopic(WeatherTopicViewHolder holder) {
-        holder.cityname.setText("北京");
+        holder.cityname.setText(resultList.get(0).currentCity);
         holder.date.setText(weatherList.get(0).date);
 
         int hour = TimeUtil.getHour();
@@ -98,7 +98,7 @@ public class WeatherAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
         holder.temperature.setText(weatherList.get(0).temperature);
 
 
-        holder.pm.setText("PM2.5: " + pm);
+        holder.pm.setText("PM2.5: " + resultList.get(0).pm25);
         holder.wind.setText(weatherList.get(0).wind);
         holder.weather.setText(weatherList.get(0).weather);
     }
